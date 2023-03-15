@@ -24,7 +24,7 @@ def cell(w, numbering_type):
     if numbering_type == 'hex':
         numbering = ('%03x' % w).upper()
     else:
-        numbering = str(w+1)    
+        numbering = str(w)
 
     rv = []
     rv.append(Paragraph(numbering, numbering_style))

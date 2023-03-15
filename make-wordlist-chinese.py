@@ -18,8 +18,8 @@ styleSheet = getSampleStyleSheet()
 labelStyle = ParagraphStyle('llab', fontFace='courier', alignment=TA_RIGHT)
 labelStyleCenter = ParagraphStyle('tlab', fontFace='courier', alignment=TA_CENTER)
 
-numbering_style = ParagraphStyle('tlab', fontName='Courier-Bold', alignment=TA_LEFT, fontSize=6, spaceAfter=2, spaceBefore=0, leading=4)
-word_style = ParagraphStyle('cell', fontName='STSong-Light', alignment=TA_CENTER, fontSize=8, spaceBefore=0, spaceAfter=0, leading=7)
+numbering_style = ParagraphStyle('tlab', fontName='Courier-Bold', alignment=TA_LEFT, fontSize=6, spaceAfter=-1, spaceBefore=0, leading=4)
+word_style = ParagraphStyle('cell', fontName='STSong-Light', alignment=TA_CENTER, fontSize=11, spaceBefore=0, spaceAfter=0, leading=10)
 
 
 def cell(w, numbering_type):

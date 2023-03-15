@@ -1,5 +1,5 @@
 from reportlab.lib import colors
-from reportlab.lib.pagesizes import letter, landscape
+from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import inch
 from reportlab.lib.enums import *
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
@@ -15,7 +15,7 @@ labelStyle = ParagraphStyle('llab', fontFace='courier', alignment=TA_RIGHT)
 labelStyleCenter = ParagraphStyle('tlab', fontFace='courier', alignment=TA_CENTER)
 
 numbering_style = ParagraphStyle('tlab', fontName='Courier-Bold', alignment=TA_LEFT, fontSize=6, spaceAfter=2, spaceBefore=0, leading=4)
-word_style = ParagraphStyle('cell', alignment=TA_CENTER, fontSize=8, spaceBefore=0, spaceAfter=0, leading=8)
+word_style = ParagraphStyle('cell', alignment=TA_CENTER, fontSize=8, spaceBefore=0, spaceAfter=0, leading=7)
 
 
 def cell(w, numbering_type):
@@ -38,7 +38,7 @@ def top_label(x):
     return Paragraph(x, labelStyleCenter)
 
 def doit(fname, numbering_type):
-    doc = SimpleDocTemplate(fname, pagesize=landscape(letter))
+    doc = SimpleDocTemplate(fname, pagesize=landscape(A4))
 
     doc.leftMargin = doc.rightMargin =  \
     doc.topMargin = doc.bottomMargin = 0.1 * inch
